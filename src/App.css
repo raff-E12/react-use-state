@@ -1,42 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+/* Implementazione dello stile */
+
+@import url(index.css);
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  src: url("./../public/font/Roboto-VariableFont_wdth\,wght.ttf");
+}
+
+#root{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  height: calc(200vh - 100vh);
+  background-color: var(--gray);
+}
+
+.card-box{
+   align-items: flex-start;
+   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.text-hd-box{
+  background-color: var(--secondary);
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  color: var(--light);
+}
+
+.btn-groups-box{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.btn-add{
+  font-weight: 900;
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.btn-add:active{
+  background-color: var(--blue);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-add:nth-child(1), .btn-add:nth-child(2){
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.text-box-card{
+  overflow: hidden;
+  padding: 20px;
 }
 
-.card {
-  padding: 2em;
+.text-cont{
+  text-align: left;
+  text-transform: capitalize;
+  width: 100%;
+  padding: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.cont-box{
+  overflow: hidden;
+  width: 90%;
+  padding: 12px;
+  border: 1px solid var(--dark);
 }
