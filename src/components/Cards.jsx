@@ -21,7 +21,7 @@ export default function Cards() {
         </div>
         <div className='container text-box-card'>
             <ul className='row cont-box rounded'>
-                {list_export.map((element) =>{
+                {list_export.length !==  0 ? list_export.map((element) =>{
                     if (element.id === isSelect) {
                         return(
                             <>
@@ -30,9 +30,11 @@ export default function Cards() {
                                 <p>{element.description}</p>
                             </li>
                             </>
-                        )
-                    }
-                })}
+                        )}
+                }) : <li className='text-cont col-lg-6'>
+                    <h2 className='error-text'>Stato Inesistente.</h2>
+                    <p>Sembra che qualcosa vado storto, ricarica la pagina...</p>
+                    </li>}
             </ul>
         </div>
     </div>
